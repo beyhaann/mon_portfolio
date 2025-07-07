@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets – Portfolio Beyhan Deligoz</title>
+  <meta name="description" content="Projets réalisés par Beyhan en développement web : HTML, CSS, JavaScript, WordPress, PHP, SQL…" />
+  <!-- SEO Open Graph -->
+  <meta property="og:title" content="Projets – Portfolio Beyhan Deligoz" />
+  <meta property="og:description" content="Projets réalisés par Beyhan en développement web : HTML, CSS, JavaScript, WordPress, PHP, SQL…" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/portrait.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Accessibilité : skip link -->
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:1000;background:#fff;color:#000;font-weight:bold;">
+    Aller au contenu principal
+  </a>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="projets.html" aria-current="page">Projets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section>
+      <h1>Mes projets web</h1>
+      <p>Découvrez ci-dessous mes réalisations principales, filtrables par technologies !</p>
+    </section>
+
+    <!-- Module de filtre JS (avec accessibilité) -->
+    <section aria-label="Filtrer les projets par technologie">
+      <!--
+      Chaque bouton a aria-pressed pour l'accessibilité
+      Les classes sur les div .projet servent au JS pour filtrer
+      -->
+      <div id="filtreProjets" style="margin-bottom: 20px;">
+        <button data-filtre="tous" class="filtre-btn actif" aria-pressed="true">Tous</button>
+        <button data-filtre="html" class="filtre-btn" aria-pressed="false">HTML/CSS</button>
+        <button data-filtre="js" class="filtre-btn" aria-pressed="false">JavaScript</button>
+        <button data-filtre="wordpress" class="filtre-btn" aria-pressed="false">WordPress</button>
+        <button data-filtre="php" class="filtre-btn" aria-pressed="false">PHP/SQL</button>
+      </div>
+    </section>
+
+    <section id="liste-projets">
+      <div class="projet html js">
+        <h2>Landing page dynamique</h2>
+        <p>Technos : HTML, CSS, JavaScript</p>
+        <p>Page d'accueil avec formulaire validé côté client, responsive, et navigation accessible.</p>
+      </div>
+      <div class="projet wordpress">
+        <h2>Blog WordPress personnalisé</h2>
+        <p>Technos : WordPress, SEO, CSS</p>
+        <p>Installation, personnalisation de thèmes, extensions, SEO optimisé.</p>
+      </div>
+      <div class="projet php sql">
+        <h2>Mini réseau social</h2>
+        <p>Technos : PHP, SQL, HTML, CSS</p>
+        <p>Gestion des utilisateurs, base de données, affichage dynamique côté serveur.</p>
+      </div>
+      <div class="projet js">
+        <h2>Quiz interactif en JavaScript</h2>
+        <p>Technos : JavaScript, UX</p>
+        <p>Petit jeu d'entraînement pour valider les acquis HTML/CSS/JS.</p>
+      </div>
+      <!-- Ajoute d'autres projets avec les classes voulues -->
+    </section>
+
+    <!-- Section explicative sur le module JS -->
+    <section id="explication-filtre-js">
+      <h2>À propos du module de filtrage</h2>
+      <p>
+        Ce module JavaScript permet de filtrer dynamiquement les projets par technologie. Il utilise la manipulation du DOM, les événements,
+        et prend en compte l’accessibilité (<code>aria-label</code>, <code>aria-pressed</code>, navigation clavier).
+        Le code est documenté et réutilisable pour tout autre filtre.
+      </p>
+    </section>
+
+    <section id="wordpress">
+  <h2>Prise en main de WordPress</h2>
+  <p>
+    J’ai installé WordPress en local (XAMPP/MAMP), configuré une base de données, pris en main le tableau de bord, et créé une page d’accueil personnalisée.
+    <br>
+    Cette expérience me permet d’être autonome pour administrer, personnaliser et publier du contenu sur un site WordPress.
+  </p>
+  <figure>
+    <img src="images/test_wordpress.jpg" alt="Capture de la page d'accueil créée sur WordPress" style="max-width:100%;border:1px solid #ddd;">
+    <figcaption>Création et publication d’une page d’accueil personnalisée sur WordPress.</figcaption>
+  </figure>
+</section>
+
+  </main>
+
+  <!-- Insertion du script JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+<!--  -->

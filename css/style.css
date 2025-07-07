@@ -1,0 +1,159 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 0;
+}
+
+/* NAVIGATION */
+header {
+    background-color: #222;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* SECTION PRINCIPALE */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* TITRES & TEXTES */
+h1, h2 {
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* IMAGE PROFIL */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* PIED DE PAGE */
+footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    main {
+        margin: 1rem;
+    }
+
+.skills {
+        margin: 2rem auto;
+        max-width: 800px;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+.skill {
+        margin-bottom: 1.5rem;
+    }
+
+.skill-name {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+.skill-bar {
+        background-color: #eee;
+        height: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+.skill-level {
+        height: 100%;
+        background-color: #4caf50;
+        text-align: right;
+        color: white;
+        padding-right: 0.5rem;
+        line-height: 20px;
+    }
+    </style>
+}
+
+.filtre-btn.actif {
+    background: #3959ad;
+    color: #fff;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    z-index: 1000;
+}
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    background: #ffd;
+    font-size: 1.2em;
+}
+
