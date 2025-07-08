@@ -27,7 +27,7 @@ Ce projet met en valeur :
 - `script.js` — validation JS
 - `css/` — styles CSS personnalisés
 - `images/` — illustrations + capture WordPress
-- `readme.md` — ce fichier 😉
+- `readme.md` — ce fichier 
 
 ---
 
