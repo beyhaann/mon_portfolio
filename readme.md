@@ -4,7 +4,7 @@ Bienvenue sur mon portfolio personnel, conçu pour démontrer mes compétences t
 
 ---
 
-## 🎯 Objectif du projet
+# Objectif du projet
 
 Ce projet met en valeur :
 - Mes compétences en **HTML, CSS, JavaScript, PHP et SQL**
@@ -15,7 +15,7 @@ Ce projet met en valeur :
 
 ---
 
-## 🧩 Contenu du projet
+# Contenu du projet
 
 - `index.html` — page d’accueil avec navigation
 - `a-propos.html` — présentation personnelle
@@ -31,7 +31,7 @@ Ce projet met en valeur :
 
 ---
 
-## 📬 Fonctionnalité dynamique
+# Fonctionnalité dynamique
 
 Le fichier `contact.php` gère :
 - La validation des champs côté serveur
@@ -42,7 +42,7 @@ Le formulaire HTML pointe correctement vers `contact.php`.
 
 ---
 
-## 🗃️ Schéma SQL (`portfolio.sql`)
+# Schéma SQL (`portfolio.sql`)
 
 ```sql
 CREATE TABLE contact (
