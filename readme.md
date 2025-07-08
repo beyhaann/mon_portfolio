@@ -1,59 +1,54 @@
-# Portfolio – Beyhan Deligoz
+# Mon Portfolio – Beyhan
 
-Bienvenue sur mon portfolio de développement web, réalisé dans le but d’intégrer directement la **L2 professionnelle Applications Web** à l’Université de Limoges.
-
-## Présentation
-
-Je suis passionnée par la création de sites et d’applications web modernes, accessibles et bien référencés.  
-Ce portfolio regroupe mes projets, mes compétences, mes certifications OpenClassrooms et mes preuves de maîtrise sur les outils et technologies attendus à l’issue d’une L1 pro Applications Web.
+Bienvenue sur mon portfolio personnel, conçu pour démontrer mes compétences techniques et ma motivation à intégrer la **L2 professionnelle Applications Web** à l'Université de Limoges.
 
 ---
 
-## Contenu du portfolio
+## 🎯 Objectif du projet
 
-- **Accueil** – Présentation, contact, navigation claire
-- **À propos** – Parcours, certifications, acquis (formations), gestion de projet
-- **Compétences** – HTML5, CSS3, JavaScript, PHP, SQL, WordPress, accessibilité, SEO
-- **Projets** – Projets filtrables (JS DOM), démo d’interactivité accessible
-- **PHP/SQL** – Exemple réel de page PHP (`exemple.php`) et fichier SQL (`portfolio.sql`)
-- **WordPress** – Expérience détaillée (installation, création, personnalisation, plugins…)
-- **Accessibilité & SEO** – Skip-link, aria, balises meta/OG, responsive, alt images
-
----
-
-## Exemples de code
-
-- **Validation avancée de formulaires** (JavaScript, regex, UX, RGPD)
-- **Filtrage dynamique de projets** (JavaScript, DOM, accessibilité)
-- **Script PHP dynamique** (`exemple.php`) pour montrer la génération de contenu côté serveur
-- **Requête SQL** (création de table, insertion, sélection)
-- **Structure sémantique et optimisée pour le SEO**
+Ce projet met en valeur :
+- Mes compétences en **HTML, CSS, JavaScript, PHP et SQL**
+- Mon autonomie dans la conception d’un site dynamique
+- L’intégration d’un formulaire de contact fonctionnel avec traitement côté serveur
+- L’usage de **WordPress** (preuve par capture + certification)
+- Le respect de bonnes pratiques en **accessibilité**, **SEO** et **organisation de projet**
 
 ---
 
-## Certifications
+## 🧩 Contenu du projet
 
-- [JavaScript OpenClassrooms (2025)](certificat_javascript.pdf)
-- [PHP/MySQL OpenClassrooms (2025)](certificat_sqlphp.pdf)
-- [WordPress OpenClassrooms (2025)](certificat_wordpress.pdf)
-
----
-
-## Objectif
-
-Intégrer la **L2 pro Applications Web** à Limoges pour approfondir la partie back-end, frameworks modernes (React, Laravel…), sécurité, gestion de projet agile, et me préparer à une carrière polyvalente dans le développement web.
-
----
-
-## Contacts
-
-- Email : byhn.del@gmail.com
-- Portfolio : https://github.com/beyhaann/mon_portfolio
+- `index.html` — page d’accueil avec navigation
+- `a-propos.html` — présentation personnelle
+- `competences.html` — compétences web (front/back)
+- `projets.html` — projets réalisés + captures
+- `contact.php` — formulaire de contact fonctionnel (avec envoi et sécurité)
+- `db.php` — connexion à la base de données (locale)
+- `portfolio.sql` — structure de la base SQL associée
+- `script.js` — validation JS
+- `css/` — styles CSS personnalisés
+- `images/` — illustrations + capture WordPress
+- `readme.md` — ce fichier 😉
 
 ---
 
-> _Portfolio réalisé en autonomie, en m’appuyant sur les cours de la L1 informatique, des formations certifiées OpenClassrooms, et des ressources officielles du web._
+## 📬 Fonctionnalité dynamique
+
+Le fichier `contact.php` gère :
+- La validation des champs côté serveur
+- La connexion à une base MySQL (via `db.php`)
+- L'insertion sécurisée des messages
+
+Le formulaire HTML pointe correctement vers `contact.php`.
 
 ---
 
-**N’hésitez pas à consulter le code source et à me contacter pour toute question ou entretien.**
+## 🗃️ Schéma SQL (`portfolio.sql`)
+
+```sql
+CREATE TABLE contact (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    date_envoi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
