@@ -65,3 +65,31 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const boutons = document.querySelectorAll(".filtre-btn");
+    const projets = document.querySelectorAll(".projet");
+
+    boutons.forEach(bouton => {
+        bouton.addEventListener("click", () => {
+            // Réinitialiser tous les boutons
+            boutons.forEach(b => b.classList.remove("actif"));
+            boutons.forEach(b => b.setAttribute("aria-pressed", "false"));
+
+            //activer le bouton cliqué
+            bouton.classList.add("actif");
+            bouton.setAttribute("aria-pressed", "true");
+
+            const filtre = bouton.getAttribute("data-filtre");
+
+            projets.forEach(projet => {
+                if (filtre === "tous" || projet.classList.contains(filtre)) {
+                    projet.style.display = "block";
+                } else {
+                    projet.style.display = "none";
+                }
+            });
+        });
+    });
+});
+
