@@ -1,5 +1,15 @@
 <?php
-require '../config.php'; // connexion PDO
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
+
+
+<?php
+require '../config.php'; //connexion PDO
 
 $stmt = $pdo->query("SELECT * FROM projets");
 $projets = $stmt->fetchAll();
@@ -18,3 +28,5 @@ $projets = $stmt->fetchAll();
 </tr>
 <?php endforeach; ?>
 </table>
+
+<a href="logout.php">Se déconnecter</a>

@@ -18,7 +18,7 @@ CREATE TABLE projects (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     description TEXT,
-    image VARCHAR(255)
+    image VARCHAR(255),
     tech_used VARCHAR(255),
     project_link VARCHAR(255),
     project_date DATE,

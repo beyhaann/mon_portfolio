@@ -157,3 +157,24 @@ footer {
     font-size: 1.2em;
 }
 
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
