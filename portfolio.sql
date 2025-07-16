@@ -1,7 +1,4 @@
--- suppression propre
-DROP DATABASE IF EXISTS portfolio;
-CREATE DATABASE portfolio DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE portfolio;
+USE id123456_portfolio; -- mets le nom exact de ta DB 000webhost ici
 
 -- table des utilisateurs (admin ou invités)
 CREATE TABLE users (
