@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$dbname = 'portfolio';
-$username = 'root'; // XAMPP par défaut
-$password = '';     // XAMPP = mot de passe vide
+$host = 'sql102.infinityfree.com';
+$dbname = 'if0_39478303_portfolio';
+$username = 'if0_39478303';
+$password = 'Pipinan17';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);

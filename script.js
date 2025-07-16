@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         let isValid = true;
 
-        // Reset messages
+        //reset messages
         document.getElementById("nomError").style.display = "none";
         document.getElementById("emailError").style.display = "none";
         document.getElementById("messageError").style.display = "none";

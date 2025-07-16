@@ -1,6 +1,10 @@
-USE id123456_portfolio; -- mets le nom exact de ta DB 000webhost ici
+--supprimer les anciennes tables (ordre important à cause des clés étrangères)
+DROP TABLE IF EXISTS project_comments;
+DROP TABLE IF EXISTS contact_messages;
+DROP TABLE IF EXISTS projects;
+DROP TABLE IF EXISTS users;
 
--- table des utilisateurs (admin ou invités)
+-- Table des utilisateurs
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
@@ -10,7 +14,7 @@ CREATE TABLE users (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
--- table des projets du portfolio
+-- Table des projets
 CREATE TABLE projects (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
@@ -23,7 +27,7 @@ CREATE TABLE projects (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
 );
 
---table des messages envoyés depuis le formulaire de contact
+-- Table des messages de contact
 CREATE TABLE contact_messages (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -33,7 +37,7 @@ CREATE TABLE contact_messages (
     submitted_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
--- table des commentaires sur les projets
+-- Table des commentaires de projets
 CREATE TABLE project_comments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     project_id INT NOT NULL,
@@ -43,22 +47,22 @@ CREATE TABLE project_comments (
     FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
 );
 
--- données de démonstration : utilisateurs
+-- Insertion d’un utilisateur admin
 INSERT INTO users (username, email, password_hash, role)
 VALUES ('admin', 'admin@example.com', SHA2('admin123', 256), 'admin');
 
--- données de démonstration : projets
+-- Insertion d’un projet
 INSERT INTO projects (title, description, tech_used, project_link, project_date, user_id)
 VALUES (
     'Mon portfolio PHP',
-    'Un site personnel développé avec PHP, MySQL et HTML/CSS. Contient un formulaire de contact dynamique et une base de données.',
+    'Un site personnel développé avec PHP, MySQL et HTML/CSS.',
     'PHP, MySQL, HTML, CSS',
     'https://github.com/inesbeyhan/portfolio',
     '2025-06-30',
     1
 );
 
--- données de démonstration : messages de contact
+-- Insertion d’un message de contact
 INSERT INTO contact_messages (name, email, subject, message)
 VALUES (
     'Elodie Demalvoisine',
@@ -67,16 +71,10 @@ VALUES (
     'Bonjour, très beau site, pouvez-vous me contacter ?'
 );
 
--- Données de démonstration : commentaire
+-- Insertion d’un commentaire de projet
 INSERT INTO project_comments (project_id, author_name, content)
 VALUES (
     1,
     'Claire Martin',
     'Bravo pour ce projet très clair et bien structuré !'
 );
-
--- Requête test pour affichage des commentaires liés aux projets
-SELECT p.title, c.author_name, c.content
-FROM project_comments c
-JOIN projects p ON c.project_id = p.id
-ORDER BY c.created_at DESC;
