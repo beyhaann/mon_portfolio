@@ -1,6 +1,6 @@
 # Mon Portfolio – Beyhan
 
-Bienvenue sur mon portfolio personnel, conçu pour démontrer mes compétences techniques et ma motivation à intégrer la **L2 professionnelle Applications Web** à l'Université de Limoges.
+Bienvenue sur mon portfolio personnel, conçu pour démontrer mes compétences techniques.
 
 ---
 
